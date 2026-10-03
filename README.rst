@@ -87,7 +87,7 @@ You will also need to add a middleware class to listen in on responses:
 
 ``CorsMiddleware`` should be placed as high as possible, especially before any
 middleware that can generate responses such as Django's ``CommonMiddleware`` or
-Whitenoise's ``WhiteNoiseMiddleware``. If it is not before, it will not be able
+Whitenoise's ``WhiteNoiseMiddleware``. If it's not before, it will not be able
 to add the CORS headers to these responses.
 
 About
@@ -317,7 +317,7 @@ Most sites will need to take advantage of the `Cross-Site Request Forgery
 protection <https://docs.djangoproject.com/en/stable/ref/csrf/>`_ that Django
 offers. CORS and CSRF are separate, and Django has no way of using your CORS
 configuration to exempt sites from the ``Referer`` checking that it does on
-secure requests. The way to do that is with its `CSRF_TRUSTED_ORIGINS setting
+secure requests. The way to do that is with it's `CSRF_TRUSTED_ORIGINS setting
 <https://docs.djangoproject.com/en/stable/ref/settings/#csrf-trusted-origins>`_.
 For example:
 
@@ -384,7 +384,7 @@ Then connect it at app ready time using a `Django AppConfig
             from myapp import handlers  # noqa
 
 A common use case for the signal is to allow *all* origins to access a subset
-of URL's, whilst allowing a normal set of origins to access *all* URL's. This
+of URL's, while allowing a normal set of origins to access *all* URL's. This
 isn't possible using just the normal configuration, but it can be achieved with
 a signal handler.
 
